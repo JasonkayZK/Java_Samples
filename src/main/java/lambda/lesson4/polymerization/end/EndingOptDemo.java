@@ -3,6 +3,7 @@ package lambda.lesson4.polymerization.end;
 import lambda.pojo.Hero;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -14,31 +15,37 @@ public class EndingOptDemo {
         for (int i = 0; i < 5; i++) {
             heros.add(new Hero("hero " + i, r.nextInt(1000), r.nextInt(100)));
         }
-        //制造一个重复数据
-        heros.add(heros.get(0));
-        System.out.println("初始化集合后的数据 (最后一个数据重复)：");
-        System.out.println(heros);
 
-        System.out.println("满足条件hp>100&&damage<50的数据");
-        heros
-                .stream()
-                .filter(h -> h.hp > 100 && h.damage < 50)
+        System.out.println("遍历集合中的每个数据");
+        heros.stream()
                 .forEach(h -> System.out.println(h));
 
-        System.out.println("去除重复的数据，去除标准是看equals");
-        heros
-                .stream()
-                .distinct()
-                .forEach(h -> System.out.println(h));
+        System.out.println("返回一个数组");
+        Object[] bs = heros.stream().toArray();
+        System.out.println(Arrays.toString(bs));
 
-        System.out.println("按照血量排序");
-        heros
-                .stream()
-                .s
+        System.out.println("返回伤害最高的那个英雄");
+        Hero min = heros.stream()
+                .max((h1, h2) -> h1.damage - h2.damage)
+                .get();
+        System.out.println(min);
 
+        System.out.println("返回伤害最低的那个英雄");
+        Hero max = heros.stream()
+                .min((h1, h2) -> h1.damage - h2.damage)
+                .get();
+        System.out.println(max);
 
+        System.out.println("流中数据的总数");
+        long count = heros.stream()
+                .count();
+        System.out.println(count);
 
-
+        System.out.println("第一个英雄");
+        Hero first = heros.stream()
+                .findFirst()
+                .get();
+        System.out.println(first);
 
     }
 }

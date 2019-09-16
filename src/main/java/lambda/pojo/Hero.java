@@ -21,6 +21,31 @@ public class Hero implements Comparable<Hero>{
         this.damage = damage;
     }
 
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public float getHp() {
+        return hp;
+    }
+
+    public void setHp(float hp) {
+        this.hp = hp;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
+
     public boolean matched() {
         return this.hp>100 && this.damage<50;
     }
