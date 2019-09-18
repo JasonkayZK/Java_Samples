@@ -8,6 +8,17 @@
     <artifactId>java_samples</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
+    <dependencies>
+
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.2.6</version>
+        </dependency>
+
+    </dependencies>
+
 <build>
 
     <!-- resources-->
@@ -32,8 +43,8 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.5.1</version>
             <configuration>
-                <source>9</source>
-                <target>9</target>
+                <source>11</source>
+                <target>11</target>
                 <encoding>UTF-8</encoding>
             </configuration>
         </plugin>
