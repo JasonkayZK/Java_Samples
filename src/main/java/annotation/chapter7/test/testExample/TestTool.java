@@ -1,4 +1,4 @@
-package annotation.chapter7.testExample;
+package annotation.chapter7.test.testExample;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

@@ -1,4 +1,4 @@
-package annotation.chapter7.testExample;
+package annotation.chapter7.test.testExample;
 
 public class NoBug {
 

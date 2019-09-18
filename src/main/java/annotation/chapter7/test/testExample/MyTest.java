@@ -1,4 +1,4 @@
-package annotation.chapter7.testExample;
+package annotation.chapter7.test.testExample;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

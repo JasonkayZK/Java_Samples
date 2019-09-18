@@ -26,7 +26,7 @@ public class GetOtherAnnotationDemo {
     private int a;
 
     @MethodTest
-    @SuppressWarnings("deprecated")
+    @SuppressWarnings("deprecation")
     public void test1() {}
 
     public static void main(String[] args) {
