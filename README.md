@@ -10,3 +10,4 @@ Now finished:
 -   NIO: https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/nio 
 -   String: https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/string
 -   Swagger with Spring Boot: https://github.com/JasonkayZK/Java_Samples/tree/swagger
+-   Mybatis-Generator: https://github.com/JasonkayZK/Java_Samples/tree/mybatis-generator
