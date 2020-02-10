@@ -1,15 +1,15 @@
-This repo stores some samples such as Java-RPC sampls, Java-MQ samples, Java-Reflecltion samples and so on.
+This branch shows how to use redis & Spring-session-data-redis to share session in a distribute system.
 
-Now finished: 
+Dependencies:
+- Spring Boot: 2.2.4.RELEASE
+- Spring-boot-starter-web
+- Spring-boot-starter-data-redis
+- commons-pool2
+- Spring-session-data-redis
 
--   RPC: https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/rpc
--   Lambda: https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/lambda
--   Reflection: https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/reflection
--   Annotation: https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/annotation
--   Proxy: https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/proxy
--   NIO: https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/nio 
--   String: https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/string
--   Swagger with Spring Boot: https://github.com/JasonkayZK/Java_Samples/tree/swagger
--   Mybatis-Generator: https://github.com/JasonkayZK/Java_Samples/tree/mybatis-generator
--   Redis-Pub/Sub: https://github.com/JasonkayZK/Java_Samples/tree/redis-pub/sub
--   Redis-distribute-lock: https://github.com/JasonkayZK/Java_Samples/tree/redis-distribute-lock
+Demo:
+
+![RedisSession.gif](http://www.luyixian.cn/upload/201901/07/201901071657172770.gif)
+
+
+

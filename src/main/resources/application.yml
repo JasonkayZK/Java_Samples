@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  # Redis配置(不同应用程序项目配置同一个Redis服务器)
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+
+    # 连接池(使用负值表示没有限制)
+    lettuce:
+      shutdown-timeout: 100
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+
