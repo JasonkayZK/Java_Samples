@@ -13,3 +13,4 @@ Now finished:
 -   Mybatis-Generator: https://github.com/JasonkayZK/Java_Samples/tree/mybatis-generator
 -   Redis-Pub/Sub: https://github.com/JasonkayZK/Java_Samples/tree/redis-pub/sub
 -   Redis-distribute-lock: https://github.com/JasonkayZK/Java_Samples/tree/redis-distribute-lock
+-   Redis-Session: https://github.com/JasonkayZK/Java_Samples/tree/redis-session
