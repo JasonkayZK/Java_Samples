@@ -12,3 +12,4 @@ Now finished:
 -   Swagger with Spring Boot: https://github.com/JasonkayZK/Java_Samples/tree/swagger
 -   Mybatis-Generator: https://github.com/JasonkayZK/Java_Samples/tree/mybatis-generator
 -   Redis-Pub/Sub: https://github.com/JasonkayZK/Java_Samples/tree/redis-pub/sub
+-   Redis-distribute-lock: https://github.com/JasonkayZK/Java_Samples/tree/redis-distribute-lock
