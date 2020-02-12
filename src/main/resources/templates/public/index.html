@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" th:href="@{../css/index.css}"/>
+</head>
+<body>
+<div>
+    <div style="width: 1400px;overflow: hidden">
+        欢迎使用
+        <button id="logout">退出登录</button>
+    </div>
+
+    <script th:src="@{https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js}"></script>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        $(function () {
+            let params = [[${sendparam}]];
+
+            if (params == null) {
+                return;//中断执行
+            }
+
+            let arrDomain = params.cookieUrl;
+            jQuery.each(arrDomain, function () {  // this 指定值
+                //循环访问
+                $.ajax({
+                    url: this + "?cookieName=" + params.cookieName + "&cookieValue=" + params.cookieValue,
+                    type: "get",
+                    dataType: "jsonp" //指定服务器返回的数据类型
+                });
+            });
+        })
+        /*]]>*/
+    </script>
+</div>
+<script>
+    // 退出登录，清空所有子系统的cookie
+    $("#logout").click(function () {
+        $.ajax({
+            url: "http://localhost:8080/sso/logout",
+            type: "get",
+            jsonp: "callback",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+            jsonpCallback: "success_jsonpCallback",//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+            dataType: "jsonp", //指定服务器返回的数据类型
+            error: function (data) {
+                console.log(data.jqXHR + " " + data.status + " " + data.error);
+            }
+        });
+    });
+</script>
+</body>
+</html>
