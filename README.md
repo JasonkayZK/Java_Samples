@@ -4,6 +4,7 @@ Now finished:
 
 |           Demo           | Url                                                          | Last Modified |                          Comment                          |
 | :----------------------: | ------------------------------------------------------------ | :-----------: | :-------------------------------------------------------: |
+|         Java-SSO         | https://github.com/JasonkayZK/Java_Samples/tree/java-sso     |  2020-02-12   |                      **UNFINISHED**                       |
 |      Redis-Session       | https://github.com/JasonkayZK/Java_Samples/tree/redis-session |  2020-02-10   |             Within Spring-session-data-redis              |
 |  Redis-distribute-lock   | https://github.com/JasonkayZK/Java_Samples/tree/redis-distribute-lock |  2020-02-09   |                                                           |
 |      Redis-Pub/Sub       | https://github.com/JasonkayZK/Java_Samples/tree/redis-pub/sub |  2020-02-09   |                                                           |
