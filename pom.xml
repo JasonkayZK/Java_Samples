@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>top.jasonkayzk</groupId>
-    <artifactId>java_samples</artifactId>
+    <artifactId>spring_ioc</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
