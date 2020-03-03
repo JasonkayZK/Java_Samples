@@ -1,21 +1,110 @@
-This repo stores some samples such as Java-RPC sampls, Java-MQ samples, Java-Reflecltion samples and so on.
+## Lambda表达式总结
 
-Now finished: 
+### 项目说明
 
-|           Demo           | Url                                                          | Last Modified |                           Comment                            |
-| :----------------------: | ------------------------------------------------------------ | :-----------: | :----------------------------------------------------------: |
-|        Spring-Ioc        | https://github.com/JasonkayZK/Java_Samples/tree/spring-ioc   |  2020-03-02   | 文章: [实现一个简单的SpringIOC容器](https://jasonkayzk.github.io/2020/03/02/实现一个简单的SpringIOC容器/) |
-|    Java-Introspector     | https://github.com/JasonkayZK/Java_Samples/tree/java-introspector |  2020-03-02   | 文章: [Java的内省技术](https://jasonkayzk.github.io/2020/03/02/Java的内省技术/) |
-|         Java-SSO         | https://github.com/JasonkayZK/Java_Samples/tree/java-sso     |  2020-02-12   |                        **UNFINISHED**                        |
-|      Redis-Session       | https://github.com/JasonkayZK/Java_Samples/tree/redis-session |  2020-02-10   |               使用: Spring-session-data-redis                |
-|  Redis-distribute-lock   | https://github.com/JasonkayZK/Java_Samples/tree/redis-distribute-lock |  2020-02-09   |                                                              |
-|      Redis-Pub/Sub       | https://github.com/JasonkayZK/Java_Samples/tree/redis-pub/sub |  2020-02-09   |                                                              |
-|    Mybatis-Generator     | https://github.com/JasonkayZK/Java_Samples/tree/mybatis-generator |  2020-01-15   |                                                              |
-| Swagger with Spring Boot | https://github.com/JasonkayZK/Java_Samples/tree/swagger      |  2020-01-02   |                                                              |
-|          String          | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/string |  2019-10-02   |                                                              |
-|           NIO            | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/nio |  2019-09-25   |                                                              |
-|          Proxy           | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/proxy |  2019-09-18   |  Static Proxy<br />Dynamic Proxy(CGLib, JDK)<br />Included   |
-|        Annotation        | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/annotation |  2019-09-18   |                                                              |
-|          Lambda          | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/lambda |  2019-09-16   |                                                              |
-|        Reflection        | https://github.com/JasonkayZK/Java_Samples/tree/java-reflection |  2019-09-14   | 文章: [Java反射基础总结](https://jasonkayzk.github.io/2019/09/14/Java反射基础总结/) |
-|           RPC            | https://github.com/JasonkayZK/Java_Samples/tree/java-rpc     |  2019-09-14   | 文章: [Java实现的一个原生RPC例子](https://jasonkayzk.github.io/2019/09/13/Java实现的一个原生RPC例子/) |
+```
+zk@zk:~/workspace/Java_Samples$ tree .
+.
+├── pom.xml
+├── src
+│   └── main
+│       ├── java
+│       │   └── lambda
+│       │       ├── lesson0
+│       │       │   └── functional
+│       │       │       ├── FunctionalDemo.java
+│       │       │       └── FunctionalService.java
+│       │       ├── lesson2
+│       │       │   └── helloLambda
+│       │       │       ├── examples
+│       │       │       │   └── HeroCompareDemo.java
+│       │       │       ├── findMethod
+│       │       │       │   ├── interfaceMethod
+│       │       │       │   │   └── InterfaceFind.java
+│       │       │       │   ├── lambda
+│       │       │       │   │   └── LambdaFind.java
+│       │       │       │   └── normal
+│       │       │       │       └── NormalFind.java
+│       │       │       └── generateLambda
+│       │       │           └── GenerateLambdaDemo.java
+│       │       ├── lesson3
+│       │       │   └── methodReferece
+│       │       │       ├── collection
+│       │       │       │   └── LambdaInCollection.java
+│       │       │       ├── constructor
+│       │       │       │   └── ConstructorLambdaDemo.java
+│       │       │       ├── examples
+│       │       │       │   ├── ConstructorDemo.java
+│       │       │       │   └── HeroCompareDemo.java
+│       │       │       ├── memberMethod
+│       │       │       │   └── MemberMethodDemo.java
+│       │       │       └── staticMethod
+│       │       │           └── StaticMethodDemo.java
+│       │       ├── lesson4
+│       │       │   └── polymerization
+│       │       │       ├── end
+│       │       │       │   └── EndingOptDemo.java
+│       │       │       ├── examples
+│       │       │       │   └── FindThirdHero.java
+│       │       │       ├── middle
+│       │       │       │   └── MiddleOptDemo.java
+│       │       │       ├── source
+│       │       │       │   └── ArrayToPipeSource.java
+│       │       │       └── TraverseDemo.java
+│       │       ├── lesson5
+│       │       │   └── examples
+│       │       │       ├── example1
+│       │       │       │   └── RunnableDemo.java
+│       │       │       ├── example10
+│       │       │       │   └── MaxMinAveSumDemo.java
+│       │       │       ├── example2
+│       │       │       │   └── ListenerDemo.java
+│       │       │       ├── example3
+│       │       │       │   └── TraverseDemo.java
+│       │       │       ├── example4
+│       │       │       │   └── PredicateDemo.java
+│       │       │       ├── example5
+│       │       │       │   └── MultiPredicate.java
+│       │       │       ├── example6
+│       │       │       │   ├── LambdaMap.java
+│       │       │       │   └── MapReduceDemo.java
+│       │       │       ├── example7
+│       │       │       │   └── FilterDemo.java
+│       │       │       ├── example8
+│       │       │       │   └── InvokeMethodDemo.java
+│       │       │       └── example9
+│       │       │           └── DistinctDemo.java
+│       │       ├── pojo
+│       │       │   └── Hero.java
+│       │       └── service
+│       │           └── HeroChecker.java
+│       └── resources
+└── target
+```
+
+本项目通过Maven构建, 共有几个章节对反射进行学习;
+
+目录结构:
+
+-   pojo: 一个Hero的POJO类
+-   lesson0: 一个`@FunctionalInterface`函数式接口例子
+-   lesson2: Lambda表达式的演变过程
+-   lesson3: Lambda表达式的方法引用
+-   lesson4: Lambda表达式对集合进行聚合操作
+-   lesson5: 十个经典的Lambda表达式例子
+    -   用Lambda实现Runnable
+    -   使用Java 8 lambda表达式进行事件处理
+    -   使用lambda表达式对列表进行迭代
+    -   使用lambda表达式和函数式接口Predicate
+    -   在lambda表达式中加入Predicate
+    -   Java 8中使用lambda表达式的Map和Reduce示例
+    -   通过过滤创建一个String列表
+    -   对列表的每个元素应用函数
+    -   复制不同的值，创建一个子列表
+    -   计算集合元素的最大值、最小值、总和以及平均值
+
+### 其他
+
+学习Lambda表达式文章:
+
+-   [Lambda表达式总结](https://jasonkayzk.github.io/2019/09/16/Lambda表达式总结/)

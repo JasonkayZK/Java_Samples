@@ -52,10 +52,11 @@ public class Hero implements Comparable<Hero>{
 
     @Override
     public int compareTo(Hero anotherHero) {
-        if(damage<anotherHero.damage)
+        if(damage<anotherHero.damage) {
             return 1;
-        else
+        } else {
             return -1;
+        }
     }
 
     @Override
