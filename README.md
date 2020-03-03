@@ -1,21 +1,86 @@
-This repo stores some samples such as Java-RPC sampls, Java-MQ samples, Java-Reflecltion samples and so on.
+## Java中一些IO相关的例子
 
-Now finished: 
 
-|           Demo           | Url                                                          | Last Modified |                           Comment                            |
-| :----------------------: | ------------------------------------------------------------ | :-----------: | :----------------------------------------------------------: |
-|        Spring-Ioc        | https://github.com/JasonkayZK/Java_Samples/tree/spring-ioc   |  2020-03-02   | 文章: [实现一个简单的SpringIOC容器](https://jasonkayzk.github.io/2020/03/02/实现一个简单的SpringIOC容器/) |
-|    Java-Introspector     | https://github.com/JasonkayZK/Java_Samples/tree/java-introspector |  2020-03-02   | 文章: [Java的内省技术](https://jasonkayzk.github.io/2020/03/02/Java的内省技术/) |
-|         Java-SSO         | https://github.com/JasonkayZK/Java_Samples/tree/java-sso     |  2020-02-12   |                        **UNFINISHED**                        |
-|      Redis-Session       | https://github.com/JasonkayZK/Java_Samples/tree/redis-session |  2020-02-10   |               使用: Spring-session-data-redis                |
-|  Redis-distribute-lock   | https://github.com/JasonkayZK/Java_Samples/tree/redis-distribute-lock |  2020-02-09   |                                                              |
-|      Redis-Pub/Sub       | https://github.com/JasonkayZK/Java_Samples/tree/redis-pub/sub |  2020-02-09   |                                                              |
-|    Mybatis-Generator     | https://github.com/JasonkayZK/Java_Samples/tree/mybatis-generator |  2020-01-15   |                                                              |
-| Swagger with Spring Boot | https://github.com/JasonkayZK/Java_Samples/tree/swagger      |  2020-01-02   |                                                              |
-|          String          | https://github.com/JasonkayZK/Java_Samples/tree/java-string  |  2019-10-02   | 文章: [为什么在Java中String被设计为不可变](https://jasonkayzk.github.io/2019/10/01/为什么在Java中String被设计为不可变/) |
-|           NIO            | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/nio |  2019-09-25   |                                                              |
-|          Proxy           | https://github.com/JasonkayZK/Java_Samples/tree/java-proxy   |  2019-09-18   | 包括: 静态/动态(JDK/CGLib)<br />文章: [Java中的代理模式-静态代理与动态代理](https://jasonkayzk.github.io/2019/09/18/Java中的代理模式-静态代理与动态代理/) |
-|        Annotation        | https://github.com/JasonkayZK/Java_Samples/tree/java-annotation |  2019-09-18   | 文章: [Java Annotation总结](https://jasonkayzk.github.io/2019/09/17/Java-Annotation总结/) |
-|          Lambda          | https://github.com/JasonkayZK/Java_Samples/tree/java-lambda  |  2019-09-16   | 文章: [Lambda表达式总结](https://jasonkayzk.github.io/2019/09/16/Lambda表达式总结/) |
-|        Reflection        | https://github.com/JasonkayZK/Java_Samples/tree/java-reflection |  2019-09-14   | 文章: [Java反射基础总结](https://jasonkayzk.github.io/2019/09/14/Java反射基础总结/) |
-|           RPC            | https://github.com/JasonkayZK/Java_Samples/tree/java-rpc     |  2019-09-14   | 文章: [Java实现的一个原生RPC例子](https://jasonkayzk.github.io/2019/09/13/Java实现的一个原生RPC例子/) |
+
+### 项目说明
+
+本分支展示了关于JavaIO相关的一些操作, 用于学习IO, NIO等
+
+项目目录如下:
+
+```
+zk@zk:~/workspace/Java_Samples$ tree .
+.
+├── pom.xml
+├── src
+│   ├── fileIODemo.txt
+│   ├── fromFile.txt
+│   ├── fromFile.xml
+│   ├── generate.py
+│   ├── main
+│   │   ├── java
+│   │   │   └── nio
+│   │   │       ├── basic
+│   │   │       │   ├── buffer
+│   │   │       │   │   └── model
+│   │   │       │   │       └── BufferModelDemo.java
+│   │   │       │   ├── channel
+│   │   │       │   │   └── fileChannel
+│   │   │       │   │       └── FileChannelDemo.java
+│   │   │       │   ├── charset
+│   │   │       │   │   └── ShowCharSetDemo.java
+│   │   │       │   ├── filelock
+│   │   │       │   │   └── FileLockDemo.java
+│   │   │       │   └── nio
+│   │   │       │       ├── Client.java
+│   │   │       │       └── Server.java
+│   │   │       ├── fileChannel
+│   │   │       │   ├── FileReadCompareTest.java
+│   │   │       │   ├── NioFileDemo.java
+│   │   │       │   └── OioFileDemo.java
+│   │   │       ├── mappedByteBuffer
+│   │   │       │   ├── ByteBufferDemo.java
+│   │   │       │   ├── FileReadCompareTest.java
+│   │   │       │   └── MappedByteBufferDemo.java
+│   │   │       ├── other
+│   │   │       │   ├── datagranChannel
+│   │   │       │   │   └── DatagramChannelDemo.java
+│   │   │       │   ├── pipe
+│   │   │       │   │   └── PipeDemo.java
+│   │   │       │   ├── scatterAndGatter
+│   │   │       │   │   └── ScatterAndGatherDemo.java
+│   │   │       │   └── transferFromAndTo
+│   │   │       │       └── TransferFromAndToDemo.java
+│   │   │       └── socketChannel
+│   │   │           ├── NioClient.java
+│   │   │           ├── NioServer.java
+│   │   │           └── OioServer.java
+│   │   └── resources
+│   ├── scatterAndGather.txt
+│   ├── testFileChannel.txt
+│   ├── toFile.txt
+│   └── toFile.xml
+└── target
+```
+
+目录结构说明:
+
+-   basic: 展示JavaIO/NIO的一些常见用法
+-   fileChannel: 通过OIO(Old Input & Output)和NIO操作文件例子
+-   mappedByteBuffer: 展示Java中Buffer的使用
+-   socketChannel: 通过OIO和NIO建立Socket连接
+-   other: 
+    -   pipe: 展示数据管道使用
+    -   datagramChannel: 展示数据报channel使用
+    -   scatterAndGatter: Scatter&Gatter的使用
+    -   transferFromAndTo: 展示流中transferTo/From方法使用
+
+### 相关文章
+
+-   IO(OIO)基础学习
+    -   [Java中的IO流](https://jasonkayzk.github.io/2019/11/25/Java中的IO流/)
+-   NIO学习
+    -   [NIO相关基础篇之JDK](https://jasonkayzk.github.io/2019/09/25/NIO相关基础篇之JDK/)
+    -   [NIO相关基础篇之操作系统I-O模型](https://jasonkayzk.github.io/2019/09/26/NIO相关基础篇之操作系统I-O模型/)
+    -   [NIO相关基础篇之实战](https://jasonkayzk.github.io/2019/09/26/NIO相关基础篇之实战/)
+

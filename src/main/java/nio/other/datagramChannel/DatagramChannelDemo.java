@@ -1,4 +1,4 @@
-package nio.other.datagranChannel;
+package nio.other.datagramChannel;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
