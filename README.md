@@ -2,7 +2,7 @@
 
 ### 项目说明
 
-本分支展示了在Java编程中的一些坑, 项目目录如下:
+本分支展示了String在Java编程中的一些坑, 项目目录如下:
 
 ```
 zk@zk:~/workspace/Java_Samples$ tree .
