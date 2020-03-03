@@ -14,7 +14,7 @@ Now finished:
 | Swagger with Spring Boot | https://github.com/JasonkayZK/Java_Samples/tree/swagger      |  2020-01-02   |                                                              |
 |          String          | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/string |  2019-10-02   |                                                              |
 |           NIO            | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/nio |  2019-09-25   |                                                              |
-|          Proxy           | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/proxy |  2019-09-18   |  Static Proxy<br />Dynamic Proxy(CGLib, JDK)<br />Included   |
+|          Proxy           | https://github.com/JasonkayZK/Java_Samples/tree/java-proxy   |  2019-09-18   | 包括: 静态/动态(JDK/CGLib)<br />文章: [Java中的代理模式-静态代理与动态代理](https://jasonkayzk.github.io/2019/09/18/Java中的代理模式-静态代理与动态代理/) |
 |        Annotation        | https://github.com/JasonkayZK/Java_Samples/tree/java-annotation |  2019-09-18   | 文章: [Java Annotation总结](https://jasonkayzk.github.io/2019/09/17/Java-Annotation总结/) |
 |          Lambda          | https://github.com/JasonkayZK/Java_Samples/tree/java-lambda  |  2019-09-16   | 文章: [Lambda表达式总结](https://jasonkayzk.github.io/2019/09/16/Lambda表达式总结/) |
 |        Reflection        | https://github.com/JasonkayZK/Java_Samples/tree/java-reflection |  2019-09-14   | 文章: [Java反射基础总结](https://jasonkayzk.github.io/2019/09/14/Java反射基础总结/) |
