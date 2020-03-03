@@ -52,7 +52,7 @@ zk@zk:~/workspace/Java_Samples$ tree .
 └── target
 ```
 
-本项目通过Maven构建, 共有几个章节对反射进行学习;
+本项目通过Maven构建, 共有几个章节对代理模式进行学习;
 
 目录结构:
 
