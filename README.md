@@ -17,5 +17,5 @@ Now finished:
 |          Proxy           | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/proxy |  2019-09-18   |  Static Proxy<br />Dynamic Proxy(CGLib, JDK)<br />Included   |
 |        Annotation        | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/annotation |  2019-09-18   |                                                              |
 |          Lambda          | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/lambda |  2019-09-16   |                                                              |
-|        Reflection        | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/reflection |  2019-09-14   |                                                              |
+|        Reflection        | https://github.com/JasonkayZK/Java_Samples/tree/java-reflection |  2019-09-14   | 文章: [Java反射基础总结](https://jasonkayzk.github.io/2019/09/14/Java反射基础总结/) |
 |           RPC            | https://github.com/JasonkayZK/Java_Samples/tree/java-rpc     |  2019-09-14   | 文章: [Java实现的一个原生RPC例子](https://jasonkayzk.github.io/2019/09/13/Java实现的一个原生RPC例子/) |
