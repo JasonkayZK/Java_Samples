@@ -7,6 +7,7 @@
     <groupId>top.jasonkayzk</groupId>
     <artifactId>java_samples</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -17,24 +18,12 @@
     </dependencies>
 
 <build>
-
-    <!-- resources-->
     <resources>
         <resource>
             <directory>src/main/resources</directory>
         </resource>
     </resources>
-
     <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.19.1</version>
-            <configuration>
-                <skipTests>true</skipTests>
-            </configuration>
-        </plugin>
-
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -46,8 +35,5 @@
             </configuration>
         </plugin>
     </plugins>
-
-
 </build>
-
 </project>
