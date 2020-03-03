@@ -48,7 +48,7 @@ public class SelectConstructor {
         System.out.println("----获取公有、无参的构造方法----");
         // 1> 因为是无参的构造方法所以类型是一个null,不写也可以：这里需要的是一个参数的类型，切记是类型!!!!!
         // 2> 返回的是描述这个无参构造函数的类对象.
-        Constructor cons = clazz.getConstructor(null);
+        var cons = clazz.getConstructor(null);
         System.out.println("consturctor = " + cons);
         // 调用方法
         Object object = cons.newInstance();
