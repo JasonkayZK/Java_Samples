@@ -1,21 +1,62 @@
-This repo stores some samples such as Java-RPC sampls, Java-MQ samples, Java-Reflecltion samples and so on.
+## 基于Java实现的一个RPC的例子
 
-Now finished: 
+### 项目说明
 
-|           Demo           | Url                                                          | Last Modified |                           Comment                            |
-| :----------------------: | ------------------------------------------------------------ | :-----------: | :----------------------------------------------------------: |
-|        Spring-Ioc        | https://github.com/JasonkayZK/Java_Samples/tree/spring-ioc   |  2020-03-02   | More Information: [实现一个简单的SpringIOC容器](https://jasonkayzk.github.io/2020/03/02/实现一个简单的SpringIOC容器/) |
-|    Java-Introspector     | https://github.com/JasonkayZK/Java_Samples/tree/java-introspector |  2020-03-02   | More information: [Java的内省技术](https://jasonkayzk.github.io/2020/03/02/Java的内省技术/) |
-|         Java-SSO         | https://github.com/JasonkayZK/Java_Samples/tree/java-sso     |  2020-02-12   |                        **UNFINISHED**                        |
-|      Redis-Session       | https://github.com/JasonkayZK/Java_Samples/tree/redis-session |  2020-02-10   |               Within Spring-session-data-redis               |
-|  Redis-distribute-lock   | https://github.com/JasonkayZK/Java_Samples/tree/redis-distribute-lock |  2020-02-09   |                                                              |
-|      Redis-Pub/Sub       | https://github.com/JasonkayZK/Java_Samples/tree/redis-pub/sub |  2020-02-09   |                                                              |
-|    Mybatis-Generator     | https://github.com/JasonkayZK/Java_Samples/tree/mybatis-generator |  2020-01-15   |                                                              |
-| Swagger with Spring Boot | https://github.com/JasonkayZK/Java_Samples/tree/swagger      |  2020-01-02   |                                                              |
-|          String          | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/string |  2019-10-02   |                                                              |
-|           NIO            | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/nio |  2019-09-25   |                                                              |
-|          Proxy           | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/proxy |  2019-09-18   |  Static Proxy<br />Dynamic Proxy(CGLib, JDK)<br />Included   |
-|        Annotation        | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/annotation |  2019-09-18   |                                                              |
-|          Lambda          | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/lambda |  2019-09-16   |                                                              |
-|        Reflection        | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/reflection |  2019-09-14   |                                                              |
-|           RPC            | https://github.com/JasonkayZK/Java_Samples/tree/master/src/main/java/rpc |  2019-09-14   |                                                              |
+```
+.
+└── main
+    ├── java
+    │   └── rpc
+    │       ├── api
+    │       │   ├── bean
+    │       │   │   ├── NetModel.java
+    │       │   │   └── Person.java
+    │       │   └── util
+    │       │       └── SerializeUtils.java
+    │       ├── client
+    │       │   ├── proxy
+    │       │   │   └── ProxyFactory.java
+    │       │   └── RpcClient.java
+    │       └── server
+    │           ├── RpcServer.java
+    │           └── service
+    │               ├── HelloService.java
+    │               └── impl
+    │                   └── HelloServiceImpl.java
+    └── resources
+        └── config.properties
+
+```
+
+本项目为一个RPC Maven项目, 共有三个模块: 
+
+-   API模块: 公共类
+-   Server模块: 服务端
+-   Client模块: 客户端
+
+### 调用测试
+
+先开启Server端, 输出:
+
+```
+Service on!
+```
+
+再开启客户端, 向服务端发送请求, 客户端收到回复:
+
+```
+say: Say hello to zhangsan
+Person: Person{name='zhangsan', age=22}
+```
+
+服务端收到Socket请求:
+
+```
+Service on!
+/127.0.0.1-connected!
+/127.0.0.1-connected!
+```
+
+### 其他
+
+更多与RPC实现相关: [Java实现的一个原生RPC例子](https://jasonkayzk.github.io/2019/09/13/Java%E5%AE%9E%E7%8E%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E5%8E%9F%E7%94%9FRPC%E4%BE%8B%E5%AD%90/)
