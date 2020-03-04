@@ -16,11 +16,11 @@ git clone git@github.com:JasonkayZK/Java_Samples.git -b 相应分支名称
 
 ③ 搭配相关文章学习相关内容;
 
->   **注意: **
+>   **注意:**
 >
 >   本项目通过Maven构建, **并基于JDK 11开发**
 >
->   **使用时请将pom.xml中`<build>`标签下换为你本地的版本, 如: **
+>   **使用时请将pom.xml中`<build>`标签下换为你本地的版本, 如:**
 >
 >   ```xml
 >   <build>
