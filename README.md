@@ -15,15 +15,15 @@
 ├── pom.xml
 ├── src
 │   └── main
-│       ├── java
-│       │   └── top
-│       │       └── jasonkayzk
-│       │           ├── app
-│       │           │   └── SimpleThreadPoolTest.java
-│       │           └── core
-│       │               ├── Pool.java
-│       │               └── SimpleThreadPool.java
-│       └── resources
+│       └── java
+│           └── top
+│               └── jasonkayzk
+│                   ├── app
+│                   │   ├── JdkThreadPoolTest.java
+│                   │   └── SimpleThreadPoolTest.java
+│                   └── core
+│                       ├── Pool.java
+│                       └── SimpleThreadPool.java
 └── target
 ```
 
@@ -38,3 +38,7 @@
 ### 文章
 
 [Java线程池ThreadPoolExecutor分析与实战](https://jasonkayzk.github.io/2020/02/06/Java线程池ThreadPoolExecutor分析与实战/)
+
+### 更新历史
+
+-   2020-03-04 添加JdkThreadPoolTest类
