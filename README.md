@@ -31,8 +31,8 @@ git clone git@github.com:JasonkayZK/Java_Samples.git -b 相应分支名称
 >               <artifactId>maven-compiler-plugin</artifactId>
 >               <version>3.8.0</version>
 >               <configuration>
->                   <source>8</source> <!-- 修改 -->
->                   <target>8</target> <!-- 修改 -->
+>                   <source>1.8</source> <!-- 修改此处为您使用的JDK -->
+>                   <target>1.8</target> <!-- 修改此处为您使用的JDK -->
 >                   <encoding>UTF-8</encoding>
 >               </configuration>
 >           </plugin>
